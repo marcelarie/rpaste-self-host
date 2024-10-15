@@ -1,0 +1,20 @@
+[package]
+name = "rpaste-self-host"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["shuttle"]
+shuttle = [
+    "dep:shuttle-actix-web",
+    "dep:shuttle-runtime",
+    "dep:shuttle-static-folder",
+    "dep:tokio",
+]
+
+[dependencies]
+actix-web = "4.3.1"
+shuttle-actix-web = "0.48.0"
+shuttle-runtime = "0.48.0"
+shuttle-static-folder = { version = "0.16.0", optional = true }
+tokio = "1.26.0"
